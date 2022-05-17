@@ -62,6 +62,7 @@ function calc(numA, numB, operation) {
 } else {
   alert(`Enter Valid Input`);
 }
+}
 calc(10, 20, 'add')
 calc(20, 10, 'sub')
 calc(20, 10, 'mul')
@@ -95,5 +96,10 @@ function getFactorial(number) {
     }
   return factorial;
 }
+
+
+
+
+
 
 
