@@ -4,18 +4,20 @@
 
 Write a function named minToSec that takes an integer minutes and converts it to seconds.
 
-
 minToSec(50) ➞ 3000
 minToSec(13) ➞ 780
 minToSec(2) ➞ 120
 */
 
+
 // - Write a Function Decleration for above problem
-function minToSec() {
-  // Your code
+function minToSec(minutes) {
+    return minutes * 60;
 }
 // - Execute the function with required parameter
-
+minToSec(50) - 3000
+minToSec(13) - 780
+minToSec(2)  - 120
 /* 2. 
 Create a function named isInRange which validates whether a number n is exclusively within the bounds of lower and upper.
 Return true and false based on that.
@@ -26,10 +28,16 @@ isInRange(1, 10, 19); // false
 */
 
 // - Write a Function Decleration for above problem
-function isInRange() {
-  // Your code
+function isInRange(lower, upper, number) {
+  if(number > lower && number < upper) {
+    return true;
+  } else {
+    return false;
+  }
 }
 // - Execute the function with required parameter
+isInRange(1, 20, 9); // true
+isInRange(1, 10, 19); // false
 
 /* 2. calculateBMI
 
@@ -49,8 +57,19 @@ Obese: BMI is 30 or more
 
 */
 
-function calculateBMI() {
-  // Your code
+function calculateBMI(weight,height) {
+ let  bmi = weight / (height * height);
+ if(bmi < 18.5) {
+   return `underweight`;
+ } else if(bmi >= 18.5 && bmi <= 24.9) {
+   return `normal weight`;
+ }else if(bmi >= 25 && bmi <= 29.9) {
+   return `overweight`;
+ }else if(bmi >= 30) {
+   return `obese`
+ }else {
+   return `enter a valid input`
+ }
 }
 
 /* 3. appropiateDrinks
@@ -64,8 +83,18 @@ Create a function that take the age are return the appropiate drink based on the
 
 */
 
-function appropiateDrinks() {
-  // Your code
+function appropiateDrinks(age) {
+  if(age < 14) {
+    return "drink fruit juice";
+  }else if(age < 18) {
+    return "drink soda";
+  }else if(age < 18) {
+    return "drink fruit-flavored beer"
+  }else if(age >= 21) {
+    return "drink throat-piercing vodka";
+  }else {
+    return `enter a valid input`
+  }
 }
 
 /* 4. Add two numers or string
@@ -79,8 +108,14 @@ Twist is when user passes anything other than number, or string value you should
 
 */
 
-function sum() {
-  // Your code
+function sum(x,y) {
+  if(typeof x == "number" && typeof y == "number") {
+    return x + y;
+  }else if(typeof x == "string" && typeof y == "string") {
+    return x + y;
+  }else {
+    alert`Enter valid values`;
+  }
 }
 
 // Function Test
